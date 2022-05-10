@@ -2,11 +2,13 @@ package Main;
 
 import javax.swing.JOptionPane;
 
+import Clases.ConvertString;
+
 public class Main {
 
 	public static void main(String[] args) {
 		int opc = 0; 
-		String polinomio, polinomio2 = "";
+		String polinomio = null, polinomio2 = "";
         do{
             opc = Menu();
             switch(opc){
@@ -29,8 +31,15 @@ public class Main {
                 	Menu();
                 break; 
             }
+            ConvertString vp = new ConvertString();
+            vp.setsCadena(polinomio);
+            
+            //System.out.println(vp.getsCadena());
        
         }while(opc != 4);
+        
+        
+        
 
 	}
 	
