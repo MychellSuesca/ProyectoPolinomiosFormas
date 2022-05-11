@@ -44,9 +44,8 @@ public class ConvertString {
         }
         
         for (int k = 0; k < Vs.length; k++) {
-            System.out.print("["+Vs[k]+"]");
+            s = s + Vs[k];
         }
-        
         this.sCadena = s;
     }
 }
