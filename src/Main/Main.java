@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		String[] result = null; 
 		String subMenu = null; 
-		
+		String res = null;
         result = Menu();
             switch(result[0]){
                 case "1":
@@ -18,10 +18,14 @@ public class Main {
                 	String termino = JOptionPane.showInputDialog("Ingrese el término:\n");
                 	iet.setTermino(termino);
                 	iet.setPolinomio(result[1]);
-                	if(subMenu == "1") {
-                		iet.insertarTermino();
-                	}else {
-                		
+                	System.out.println(subMenu);
+                	switch(subMenu){
+                		case "1":
+                			res = iet.insertarTermino();
+                		break;
+                		case "2":
+                			iet.eliminarTermino();
+                		break;
                 	}
                 break;
                 case "2":
@@ -36,11 +40,8 @@ public class Main {
                 default:
                 break; 
             }
-            
-            
-            //System.out.println(vp.getsCadena());s
-        
-
+                  
+            System.out.println(res);   
 	}
 	
 	public static String[] Menu(){
