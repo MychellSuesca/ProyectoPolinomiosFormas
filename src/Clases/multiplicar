@@ -1,0 +1,25 @@
+public Forma1 multiplicar(Forma1 y){
+        int may, i, j, expx, expy, posr;
+        
+        may = (mayor((int) V[0], y.getVf1())));
+        Forma1 R = new Forma1(may+2);
+        R.setVf1(0, may);
+        i = 1; j = 1;
+        while(i<V[0]+2 && j<y.getVf1 (0)+2){
+            expx = (int) (V[0]+2-i);
+            expy = y.getVf1(0)+2-j;
+            if (expx>expy) {
+                posr = R.getVf1(0)+2-expx;
+                R.asignarDato(posr, V[i]);
+                i++;
+            }else if(expx<expy){
+                    posr = R.getVf1(0)+2-expy;
+                    R.setVf1(posr, y.getVf1(j));
+                    j++;
+                }else if(expx==expy){
+                posr = R.getVf1(0)+2-expy;
+                R.setVf1(posr, V[i]*y.getVf1(j));
+                j++; i++;
+            }
+        }
+        return R;
