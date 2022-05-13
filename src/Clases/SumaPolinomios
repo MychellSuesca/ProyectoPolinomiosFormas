@@ -1,0 +1,30 @@
+package Clases;
+
+public class SumaPolinomios{
+	
+	public Forma1 suma(Forma1 y){
+        int may, i, j, expx, expy, posr;
+        
+        may = (mayor((int) V[0], y.getVf1())));
+        Forma1 R = new Forma1(may+2);
+        R.setVf1(null);
+        i = 1; j = 1;
+        while(i<V[0]+2 && j<y.getVf1()){
+            expx = (int) (V[0]+2-i);
+            expy = y.getVf1(0)+2-j;
+            if (expx>expy) {
+                posr = R.getVf1(0)+2-expx;
+                R.asignarDato(posr, V[i]);
+                i++;
+            }else if(expx<expy){
+                    posr = R.getVf1()(0)+2-expy;
+                    R.asignarDato(posr, y.getVf1()(j));
+                    j++;
+                }else if(expx==expy){
+                posr = R.getVf1()(0)+2-expy;
+                R.asignarDato(posr, V[i]+y.getVf1());
+                j++; i++;
+            }
+        }
+        return R;
+}
